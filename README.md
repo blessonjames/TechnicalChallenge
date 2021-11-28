@@ -13,6 +13,9 @@ Note: The register & login functionality is not implemented yet but the page can
 ## Challenge 2:
 The python script connects to Azure using service principal. 
 
+It needs azure library. Install it using the command: 
+`pip install azure`
+
 It gathers data of the VM and saves it in a dictionary. 
 
 User can access the data using dict keys provided in the comments.
