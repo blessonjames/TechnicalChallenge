@@ -49,8 +49,8 @@ def main():
     secret = ""
 
     # VM data
-    resource_group = "challenge2-rg"
-    vm_name = "testVM2"    
+    resource_group = ""
+    vm_name = ""    
 
     obj = Azure(subscr_id, client_id, tenant_id, secret, resource_group, vm_name)
     
