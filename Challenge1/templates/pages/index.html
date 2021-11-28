@@ -1,0 +1,316 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Challenge 1</title>
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Philosopher:ital,wght@1,700&family=Ubuntu&family=Sacramento&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/b678ecaf6f.js" crossorigin="anonymous"></script>
+
+  <!-- Favicon -->
+  <link rel="icon" href="{% static 'favicons/favicon.ico' %}">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+
+<body>
+  <section id="nav-section">
+    <div class="container-fluid">
+      <!-- Nav Bar -->
+      <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#intro"><img class="logo" src="{% static 'favicons/logo.png' %}" alt="logo">  Blesson</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Learn <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact-section">Contact <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'register' %}">Register <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'login' %}">Login <span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+        </div>
+
+      </nav>
+    </div>
+    </<section>
+
+    <section id="intro">
+      <div class="container-fluid">
+        <div class="intro-text">
+          <h1 class="intro-header">WELCOME</h1>
+          <h3 class="h3-role">To</h3>
+          <h1 class="intro-header">Challenge 1</h1>
+          <p class="intro-para">This is a platform where you can learn different tools & technologies.</p>
+          <p class="intro-para">Happy Learning!</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container-fluid">
+        <div>
+          <h1 class="skill-header">Tools/Technologies</h1>
+          <p class="skill-para">Click on the icon to explore</p>
+        </div>
+        <div class="row">
+
+          <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+            <a href="https://www.javatpoint.com/html-tutorial" target="_blank">
+              <img class="skill-img" src="{% static 'images/html.png' %}" alt="HTML">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+            <a href="https://www.javatpoint.com/css-tutorial" target="_blank">
+              <img class="skill-img" src="{% static 'images/css.png' %}" alt="CSS">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+            <a href="https://javascript.info/" target="_blank">
+              <img class="skill-img" src="{% static 'images/javascript.png' %}" alt="JavaScript">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+            <a href="https://www.javatpoint.com/bootstrap-tutorial" target="_blank">
+              <img class="skill-img" src="{% static 'images/bootstrap.png' %}" alt="BootStrap">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+            <a href="https://docs.python.org/3/tutorial/" target="_blank">
+              <img class="skill-img" src="{% static 'images/python.png' %}" alt="Python">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+            <a href="https://docs.djangoproject.com/en/3.2/intro/tutorial01/" target="_blank">
+              <img class="skill-img" src="{% static 'images/django.png' %}" alt="Django">
+            </a>            
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+            <a href="https://docs.ansible.com/ansible/latest/user_guide/intro_getting_started.html" target="_blank">
+              <img class="skill-img" src="{% static 'images/Ansible.png' %}" alt="Ansible">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+            <a href="https://www.javatpoint.com/cpp-tutorial" target="_blank">
+              <img class="skill-img" src="{% static 'images/cplus.png' %}" alt="C++">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+            <a href="https://www.oracletutorial.com/plsql-tutorial/" target="_blank">
+              <img class="skill-img" src="{% static 'images/pl-sql.png' %}" alt="PL/SQL">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+            <a href="https://www.postgresqltutorial.com/" target="_blank">
+              <img class="skill-img" src="{% static 'images/PostgreSQL.png' %}" alt="PostgreSQL">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+            <a href="https://dev.mysql.com/doc/refman/8.0/en/tutorial.html" target="_blank">
+              <img class="skill-img" src="{% static 'images/mysql.png' %}" alt="MySQL">
+            </a>            
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+            <a href="" target="_blank">
+              <img class="skill-img" src="{% static 'images/mongodb.png' %}" alt="MongoDB">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+            <a href="https://docs.docker.com/get-started/" target="_blank">
+              <img class="skill-img" src="{% static 'images/docker.png' %}" alt="Docker">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+            <a href="https://www.javatpoint.com/linux-tutorial">
+              <img class="skill-img" src="{% static 'images/linux.png' %}" alt="Linux">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+            <a href="https://linuxconfig.org/bash-scripting-tutorial" target="_blank">
+              <img class="skill-img" src="{% static 'images/bash.png' %}" alt="Bash">
+            </a>            
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+            <a href="https://www.atlassian.com/git/tutorials" target="_blank">
+              <img class="skill-img" src="{% static 'images/git.png' %}" alt="Git">
+            </a>            
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+            <a href="https://www.jenkins.io/doc/tutorials/" target="_blank">
+              <img class="skill-img" src="{% static 'images/jenkins.png' %}" alt="Jenkins">
+            </a>            
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+            <a href="https://azure.microsoft.com/en-in/" target="_blank">
+              <img class="skill-img" src="{% static 'images/azure.png' %}" alt="Microsoft Azure">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+            <a href="https://azure.microsoft.com/en-us/services/devops/#overview" target="_blank">
+              <img class="skill-img" src="{% static 'images/azure_devops.png' %}" alt="Azure Pipelines">
+            </a>            
+          </div>
+        </div>
+        <button type="button" class="btn btn-dark btn-lg more-info-btn" data-toggle="modal" data-target="#skills-detail"><i class="fas fa-info-circle"></i> More Info</button>
+        <div class="modal fade contact-form" id="skills-detail" role="dialog">
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="inquiryModalLabel">Tools & Technologies</h5>
+                <button type="button" class="close" data-dismiss="modal">
+                  <span>&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <table>
+                  <tr>
+                    <td>Azure DevOps</td>
+                    <td class="star"><a href="https://azure.microsoft.com/en-us/services/devops/#overview" target="_blank">Tutorials</a></td>
+                  </tr>
+                  <tr>
+                    <td>Microsoft Azure</td>
+                    <td class="star"><a href="https://azure.microsoft.com/en-in/" target="_blank">Tutorials</a></td>
+                  </tr>
+                  <tr>
+                    <td>Jenkins</td>
+                    <td class="star"><a href="https://www.jenkins.io/doc/tutorials/" target="_blank">Tutorials</a></td>
+                  </tr>
+                  <tr>
+                    <td>HTML</td>
+                    <td class="star"><a href="https://www.javatpoint.com/html-tutorial" target="_blank">Tutorials</a></td>
+                  </tr>
+                  <tr>
+                    <td>CSS</td>
+                    <td class="star"><a href="https://www.javatpoint.com/css-tutorial" target="_blank">Tutorials</a></td>
+                  </tr>
+                  <tr>
+                    <td>JavaScript</td>
+                    <td class="star"><a href="https://javascript.info/" target="_blank">Tutorials</a></td>
+                  </tr>
+                  <tr>
+                    <td>Bootstrap</td>
+                    <td class="star"><a href="https://www.javatpoint.com/bootstrap-tutorial" target="_blank">Tutorials</a></td>
+                  </tr>
+                  <tr>
+                    <td>Python</td>                    
+                    <td class="star"><a href="https://docs.python.org/3/tutorial/" target="_blank">Tutorials</a></td>
+                  </tr>
+                  <tr>
+                    <td>Django</td>
+                    <td class="star"><a href="https://docs.djangoproject.com/en/3.2/intro/tutorial01/" target="_blank">Tutorials</a></td>
+                  </tr>
+                  <tr>
+                    <td>Ansible</td>
+                    <td class="star"><a href="https://docs.ansible.com/ansible/latest/user_guide/intro_getting_started.html" target="_blank">Tutorials</a></td>
+                  </tr>
+                  <tr>
+                    <td>Docker & Containers</td>
+                    <td class="star"><a href="https://docs.docker.com/get-started/" target="_blank">Tutorials</a></td>
+                  </tr>
+                  <tr>
+                    <td>PL/SQL</td>
+                    <td class="star"><a href="https://www.oracletutorial.com/plsql-tutorial/" target="_blank">Tutorials</a></td>
+                  </tr>
+                  <tr>
+                    <td>Shell Scripting</td>
+                    <td class="star"><a href="https://linuxconfig.org/bash-scripting-tutorial" target="_blank">Tutorials</a></td>
+                  </tr>
+                  <tr>
+                    <td>Git</td>
+                    <td class="star"><a href="https://www.atlassian.com/git/tutorials" target="_blank">Tutorials</a></td>
+                  </tr>
+                  <tr>
+                    <td>Unix/Linux</td>                    
+                    <td class="star"><a href="https://www.javatpoint.com/linux-tutorial" target="_blank">Tutorials</a></td>
+                  </tr>
+                  <tr>
+                    <td>C++</td>
+                    <td class="star"><a href="https://www.javatpoint.com/cpp-tutorial" target="_blank">Tutorials</a></td>
+                  </tr>
+                </table>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact-section">
+      <h1 class="h1-contact">Need more information?</h1>
+      <h1 class="h1-contact2">Got some suggesstions?</h1>
+      <h2 class="h2-contact">Send your message/queries...</h2>
+      <button class="btn btn-lg btn-light contact-btn" type="button" data-toggle="modal" data-target="#contact">Contact</button>
+      <div class="modal fade contact-form" id="contact" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="inquiryModalLabel">Message Me</h5>
+              <button type="button" class="close" data-dismiss="modal">
+                <span>&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form action="index.html" method="POST">
+                <div class="form-group">
+                  <label for="fname" class="col-form-label">Name:</label>
+                  <input type="text" name="fname" id="fname" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label for="femail" class="col-form-label">Email:</label>
+                  <input type="email" name="femail" id="femail" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label for="fphone" class="col-form-label">Phone:</label>
+                  <input type="text" name="fphone" id="fphone" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="fmessage" class="col-form-label">Message:</label>
+                  <textarea name="fmessage" id="fmessage" class="form-control"></textarea>
+                </div>
+                <hr>
+                <input type="button" value="Send" class="btn btn-block btn-dark" onclick="sendEmail()">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="footer">
+      <a class="a-footer" href="http://www.linkedin.com/in/blessonjames" target="_blank"><i class="fab fa-linkedin footer-icon"></i></a>
+      <a class="a-footer" href="http://www.facebook.com/blesson.james.9" target="_blank"><i class="fab fa-facebook-f footer-icon"></i></a>
+      <a class="a-footer" href="http://www.instagram.com/blesson.james" target="_blank"><i class="fab fa-instagram footer-icon"></i></a>
+      <p class="p-footer">© Copyright 2021 blessonjames.io</p>
+    </section>
+
+</body>
+
+</html>
