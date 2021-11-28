@@ -11,7 +11,7 @@ This application is running in a digitalocean droplet. It is configured using Gu
 Note: The register & login functionality is not implemented yet but the page can be still accessed.
 
 ## Challenge 2:
-The python script connecta to Azure using service principal. 
+The python script connects to Azure using service principal. 
 
 It gathers data of the VM and saves it in a dictionary. 
 
